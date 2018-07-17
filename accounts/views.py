@@ -1,8 +1,12 @@
+from django.shortcuts import redirect, render
+from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView
+from .forms import SignUpForm
+
 # Create your views here.
 
 @method_decorator(login_required, name='dispatch')
