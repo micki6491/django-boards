@@ -15,7 +15,7 @@ import os
 from decouple import config, Csv
 import dj_database_url
 
-SECRET_KEY = config['SECRET_KEY']
+SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 DATABASES = {
@@ -135,6 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, 'static'),
