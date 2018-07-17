@@ -1,3 +1,7 @@
 .navbar-brand {
 	font-family: 'Chela+One', cursive;
 }
+
+body {
+	background-image: url(../img/concrete-texture.png);
+}
